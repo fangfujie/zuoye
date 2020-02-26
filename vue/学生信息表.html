@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<table border="" cellspacing="" cellpadding="">
+				<tr><th colspan="5">学生信息表</th></tr>
+				<tr>
+					<td>学号</td>
+					<td>姓名</td>
+					<td>年龄</td>
+					<td>籍贯</td>
+					<td>联系方式</td>
+				</tr>
+				<tr v-for="item in list">
+					<td>{{item.xuehao}}</td>
+					<td>{{item.name}}</td>
+					<td>{{item.age}}</td>
+					<td>{{item.jiguan}}</td>
+					<td>{{item.lianxi}}</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el:"#app",
+			data:{
+				list:[
+					{"xuehao":"123","name":"小丽","age":"19","jiguan":"四川","lianxi":"14756523856"},
+					{"xuehao":"152","name":"小芳","age":"20","jiguan":"广东","lianxi":"14756523856"},
+					{"xuehao":"147","name":"小红","age":"18","jiguan":"辽宁","lianxi":"14756523856"},
+					{"xuehao":"258","name":"小蓝","age":"23","jiguan":"山东","lianxi":"14756523856"},
+					{"xuehao":"369","name":"小黄","age":"25","jiguan":"海南","lianxi":"14756523856"},
+				]
+			}
+		})
+	</script>
+</html>
